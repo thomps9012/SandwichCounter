@@ -39,30 +39,33 @@
   <!-- here we'll hav the sandwich eaten counts not displayed till the button has been clicked -->
   <div style="display: none;" id="pbjCount">
     <br>
+    <img id="pbjPic" src="./pbj.jpg" alt="PBJ Sandwich">
     <h1>
       Peanut Butter and Jelly Sandwiches Eaten:
       
     </h1>
-    <h1 class="pbjCount">
+    <h1 id="pbjCountNum">
         
     </h1>
   </div>
 
   <div style="display: none;" id="grilledcheeseCount">
+    <img id="grilledcheesePic" src="./grilledCheese.jpg" alt="Grilled Cheese Sandwich">
     <h1>
       <br>
       Grilled Cheese Sandwiches Eaten:
-      <h1 class="grilledcheeseCount">
+      <h1 id="grilledcheeseCountNum">
 
       </h1>
     </h1>
   </div>
 
   <div style="display: none;" id="roastbeefCount">
+    <img id="roastbeefPic" src="./roastBeef.jpg" alt="Roast Beef Sandwich">
     <h1>
       <br>
       Roast Beef Sandwiches Eaten:
-      <h1 class="roastbeefCount">
+      <h1 id="roastbeefCountNum">
         
       </h1>
     </h1>
@@ -100,7 +103,7 @@
         alert("You've eaten a PBJ Sandwich");
         
         document.getElementById('pbjCount').style.display="block";
-        document.getElementsByClassName('pbjCount').innerHTML = parseInt(pbjCount);
+        document.getElementById('pbjCountNum').innerHTML = pbjCount;
       });
 
       // function for Grilled Cheese Button
@@ -110,7 +113,7 @@
         alert("You've eaten a Grilled Cheese Sandwich");
         
         document.getElementById('grilledcheeseCount').style.display="block";
-        document.getElementsByClassName('grilledcheeseCount').innerHTML = parseInt(pbjCount);
+        document.getElementById('grilledcheeseCountNum').innerHTML = pbjCount;
       });
 
       // function for Roast Beef Button
@@ -120,7 +123,7 @@
         alert("You've eaten a Roast Beef Sandwich");
         
         document.getElementById('roastbeefCount').style.display="block";
-        document.getElementsByClassName('roastbeefCount').innerHTML = parseInt(pbjCount);
+        document.getElementById('roastbeefCountNum').innerHTML = pbjCount;
       });
       // ...
 
