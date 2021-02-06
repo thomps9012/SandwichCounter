@@ -1,15 +1,8 @@
-### File
+# Purpose
+This is a simple Sandwich Counter Project that was revisited from my Full Stack Coding Web Development Bootcamp. All of the development is done through the front end via vanilla JavaScript, HTML5, CSS, and jQuery.
 
-* [`sandwich-click-unsolved`](Unsolved/sandwich-click-unsolved.html)
+## Instructions
+In order to run this project, simply download the git file, and then in VS Code right click the sandwich-click-unsolved.html file and you'll be presented with the option to open the file with a live server. The aforementioned action will begin running the sandwich counter application.
 
-### Instructions
-
-* Add in the missing code such that clicking any of the sandwiches causes…
-
-  1. An alert message to popup saying something snarky about the sandwich type.
-
-  2. A second alert message that displays to the user how many of that specific sandwich they've eaten.
-
-  3. **HINT:** You will need counter variables.
-
-* **BONUS:** Add an image to the `image-div` on the click event.
+### What the App Displays
+The application shows the ability of JavaScript to toggle between hiding and displaying divs on button clicks, incrementing a count dynamically and then erasing the count on page reload. Adding text, specifically the sandwiches eaten count, to an HTML element. And lastly the functions, as most of JavaScript is, runs asynchonously.
