@@ -1,0 +1,18 @@
+#pbjBtn, #grilledcheeseBtn, #roastbeefBtn {
+    position: relative;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin-top: 75px;
+    background-color: indigo;
+}
+
+.jumbotron{
+    background-color: cornflowerblue;
+    color: ghostwhite;
+}
+
+.sandwichBtns{
+    background-color: rgb(248, 151, 116);
+}

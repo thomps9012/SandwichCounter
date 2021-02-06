@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- importint custom CSS -->
+  <link rel="stylesheet" href="./sandwich.css">
+</head>
+
+<body>
+  <div class="jumbotron">
+
+    <h1 class="text-center">Click to Eat a Sandwich</h1>
+  </div>
+  <section class="sandwichBtns">
+    <button id="pbjBtn" class="btn btn-primary btn-lg">
+      <h3 class="text-center" id="pbj">Peanut Butter Jelly</h3>
+    </button>
+    <br></br>
+    <button id="grilledcheeseBtn" class="btn btn-primary btn-lg">
+      <h3 class="text-center" id="grilledcheese">Grilled Cheese</h3>
+    </button>
+    <br></br>
+    <button id="roastbeefBtn" class="btn btn-primary btn-lg">
+      <h3 class="text-center" id="roastbeef">Roast Beef</h3>
+    </button>
+  </section>
+
+
+  <div id="image-div"></div>
+  <!-- here we'll hav the sandwich eaten counts not displayed till the button has been clicked -->
+  <div style="display: none;" id="pbjCount">
+    <br>
+    <h1>
+      Peanut Butter and Jelly Sandwiches Eaten:
+      
+    </h1>
+    <h1 class="pbjCount">
+        
+    </h1>
+  </div>
+
+  <div style="display: none;" id="grilledcheeseCount">
+    <h1>
+      <br>
+      Grilled Cheese Sandwiches Eaten:
+      <h1 class="grilledcheeseCount">
+
+      </h1>
+    </h1>
+  </div>
+
+  <div style="display: none;" id="roastbeefCount">
+    <h1>
+      <br>
+      Roast Beef Sandwiches Eaten:
+      <h1 class="roastbeefCount">
+        
+      </h1>
+    </h1>
+  </div>
+
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function () {
+      
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+      var pbjCount = 0;
+      var grilledcheeseCount = 0;
+      var roastbeefCount = 0;
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+     
+      // function for PBJ Button
+      document.getElementById("pbjBtn").addEventListener("click", function() {
+        pbjCount++;
+        console.log(pbjCount);
+        alert("You've eaten a PBJ Sandwich");
+        
+        document.getElementById('pbjCount').style.display="block";
+        document.getElementsByClassName('pbjCount').innerHTML = parseInt(pbjCount);
+      });
+
+      // function for Grilled Cheese Button
+      document.getElementById("grilledcheeseBtn").addEventListener("click", function() {
+        grilledcheeseCount++;
+        console.log(grilledcheeseCount);
+        alert("You've eaten a Grilled Cheese Sandwich");
+        
+        document.getElementById('grilledcheeseCount').style.display="block";
+        document.getElementsByClassName('grilledcheeseCount').innerHTML = parseInt(pbjCount);
+      });
+
+      // function for Roast Beef Button
+      document.getElementById("roastbeefBtn").addEventListener("click", function() {
+        roastbeefCount++;
+        console.log(roastbeefCount);
+        alert("You've eaten a Roast Beef Sandwich");
+        
+        document.getElementById('roastbeefCount').style.display="block";
+        document.getElementsByClassName('roastbeefCount').innerHTML = parseInt(pbjCount);
+      });
+      // ...
+
+    });
+
+  </script>
+
+</body>
+
+</html>
